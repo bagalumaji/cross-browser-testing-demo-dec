@@ -22,11 +22,10 @@ public class DemoTest {
     }
     @DataProvider
     public Object[][] getData(){
-        Object[][] data={
+        return new Object[][]{
                 {"username-1","password-1","chrome"},
                 {"username-2","password-1","firefox"},
                 {"username-3","password-3","edge"}
         };
-        return data;
     }
 }
