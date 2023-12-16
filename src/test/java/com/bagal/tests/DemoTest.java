@@ -10,7 +10,6 @@ import java.util.Map;
 public class DemoTest {
     @BeforeMethod
     public void setup(Object [] testData){
-
         Map<String,String> data = (Map)testData[0];
         System.out.print("username = " + data.get("username"));
         System.out.print("  password = " + data.get("password"));
