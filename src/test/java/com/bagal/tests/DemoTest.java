@@ -14,11 +14,9 @@ import java.util.List;
 import java.util.Map;
 
 public class DemoTest {
-    @BeforeMethod(alwaysRun = true)
+    @BeforeMethod
     public void setup(Object [] testData){
-        /*System.out.print("username = " + testData[0]);
-        System.out.print("  password = " + testData[1]);
-        System.out.println("  browser = " + testData[2]);*/
+
         Map<String,String> data = (Map)testData[0];
         System.out.print("username = " + data.get("username"));
         System.out.print("  password = " + data.get("password"));
@@ -27,12 +25,6 @@ public class DemoTest {
 
     @Test(dataProvider = "getData")
     public void demoTest(Map<String,String> data){
-        /*WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://www.amazon.in/");
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
-        System.out.println("driver.getTitle() = " + driver.getTitle());
-        driver.quit();*/
         System.out.print("username = " + data.get("username"));
         System.out.print("  password = " + data.get("password"));
         System.out.println("  browser = " + data.get("browser"));
