@@ -15,17 +15,20 @@ public class AmazonSearchTests extends TestBase {
     @Test(dataProvider = "getData")
     public void amazonSearchTest1(TestData testData) {
         System.out.println("driver.getTitle() = " + driver.getTitle());
+        System.out.println("testData = " + testData);
     }
     @Test(dataProvider = "getData")
     public void amazonSearchTest2(TestData testData) {
         System.out.println("driver.getTitle() = " + driver.getTitle());
+        System.out.println("testData = " + testData);
     }
     @Test(dataProvider = "getData")
     public void amazonSearchTest3(TestData testData) {
         System.out.println("driver.getTitle() = " + driver.getTitle());
+        System.out.println("testData = " + testData);
     }
 
-    @DataSupplier
+    @DataSupplier(name = "getData")
     public StreamEx<TestData> getData(Method method) {
         return use(XlsxReader.class)
                 .withTarget(TestData.class)
