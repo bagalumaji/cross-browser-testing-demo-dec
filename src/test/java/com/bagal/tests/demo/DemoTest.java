@@ -1,4 +1,4 @@
-package com.bagal.tests;
+package com.bagal.tests.demo;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
