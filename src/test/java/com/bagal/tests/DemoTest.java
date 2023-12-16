@@ -41,10 +41,5 @@ public class DemoTest {
         map3.put("browser","firefox");
 
         return new Object[]{map,map2,map3};
-        /*return new Object[][]{
-                {"username-1","password-1","chrome"},
-                {"username-2","password-1","firefox"},
-                {"username-3","password-3","edge"}
-        };*/
     }
 }
