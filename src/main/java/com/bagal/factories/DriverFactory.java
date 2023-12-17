@@ -3,6 +3,7 @@ package com.bagal.factories;
 import com.bagal.exceptions.BrowserNotSupportedException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
@@ -17,6 +18,7 @@ public final class DriverFactory {
             case "chrome" -> new ChromeDriver();
             case "firefox" -> new FirefoxDriver();
             case "safari" -> new SafariDriver();
+            case "edge" -> new EdgeDriver();
             default -> throw new BrowserNotSupportedException(browser + " browser not supported");
         };
         driver.manage().window().maximize();
