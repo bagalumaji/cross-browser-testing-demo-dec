@@ -13,10 +13,12 @@ public class HomePage extends BasePage{
     public boolean isPageLoaded() {
         return PageAction.isDisplayed(SEARCH_TEXT_BOX);
     }
-    public void typeTextInSearchTextBox(String searchText){
+    public HomePage typeTextInSearchTextBox(String searchText){
         type(SEARCH_TEXT_BOX,searchText);
+        return this;
     }
-    public void clickOnSearchButton(){
+    public HomePage clickOnSearchButton(){
         click(SEARCH_BUTTON);
+        return this;
     }
 }
