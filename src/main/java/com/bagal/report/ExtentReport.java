@@ -13,7 +13,7 @@ private static ExtentReports extentReports;
 
     public static void initReport() {
         extentReports = new ExtentReports();
-        ExtentSparkReporter extentSparkReporter = new ExtentSparkReporter("reports/index.html");
+        ExtentSparkReporter extentSparkReporter = new ExtentSparkReporter("target/report/index.html");
         extentSparkReporter.config().setTheme(Theme.DARK);
         extentSparkReporter.config().setReportName("Amazon Search Test Report");
         extentSparkReporter.config().setDocumentTitle("Cross Browser Test");
