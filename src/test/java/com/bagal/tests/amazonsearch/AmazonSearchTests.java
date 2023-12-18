@@ -7,9 +7,8 @@ import com.bagal.testbase.TestBase;
 import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
-
 public class AmazonSearchTests extends TestBase {
-    @Test(dataProvider = "getAmazonSearchData", dataProviderClass = AmazonDataProvider.class)
+    @Test(dataProvider = "getAmazonSearchData", dataProviderClass = AmazonDataProvider.class,description = "amazon search test")
     public void amazonSearchTest(TestData testData) {
         HomePage homePage = new HomePage();
         assertTrue(homePage.isPageLoaded());
