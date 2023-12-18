@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Cross Browser Test">
+<listeners>
+    <listener class-name="com.bagal.listeners.FrameworkListener"/>
+</listeners>
+    <test name="Amazon Search Test">
+        <classes>
+            <class name="com.bagal.tests.amazonsearch.AmazonSearchTests" />
+        </classes>
+    </test>
+</suite>
