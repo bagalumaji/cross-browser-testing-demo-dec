@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.List;
 
 public class WaitFactory {
     public static WebElement waitForElementToBeClickable(By locator) {
@@ -18,5 +19,8 @@ public class WaitFactory {
 
     public static WebElement waitForElementToVisible(By locator) {
         return getWait().until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+    public static List<WebElement> waitForVisibilityOfAllElements(By locator){
+       return getWait().until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
     }
 }
