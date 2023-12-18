@@ -9,7 +9,7 @@ public final class ExtentManager {
 
     private static final ThreadLocal<ExtentTest> EXTENT_TEST = new ThreadLocal<>();
 
-    public static void setExtentTest(ExtentTest test){
+    static void setExtentTest(ExtentTest test){
         if(Objects.nonNull(test)){
             EXTENT_TEST.set(test);
         }
